@@ -20,6 +20,7 @@ module.exports = {
 		alert("testOK");
         cordova.exec(
 			function (result) {
+				alert("ok");
 				console.log('setUp succeeded.');
 				
 				if (typeof result == "string") {
@@ -89,6 +90,7 @@ module.exports = {
 				}
 			},
 			function (error) {
+				alert("error");
 				console.log('setUp failed.');
 			},
             'AdColonyPlugin',
