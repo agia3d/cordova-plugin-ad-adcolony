@@ -15,12 +15,15 @@ module.exports = {
             [email, licenseKey]
         ); 
     },
+function nativePluginErrorHandler(error) {
+    alert("ERROR: \r\n" + error);
+}
 	setUp: function(appId, InterstitialAdZoneId, rewardedVideoAdZoneId) {
 		var self = this;
 		alert("testOK");
         cordova.exec(
 			function (result) {
-				alert("ok");
+			//	alert("ok");
 				console.log('setUp succeeded.');
 				
 				if (typeof result == "string") {
@@ -89,10 +92,11 @@ module.exports = {
 					//}
 				}
 			},
-			function (error) {
-				alert("error");
+			/*function (error) {
+			//	alert("error");
 				console.log('setUp failed.');
-			},
+			}*/
+			nativePluginErrorHandler,
             'AdColonyPlugin',
             'setUp',			
 			[appId, InterstitialAdZoneId, rewardedVideoAdZoneId]
