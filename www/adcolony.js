@@ -16,7 +16,8 @@ module.exports = {
         ); 
     },
 	setUp: function(appId, InterstitialAdZoneId, rewardedVideoAdZoneId) {
-		var self = this;	
+		var self = this;
+		alert("testOK");
         cordova.exec(
 			function (result) {
 				console.log('setUp succeeded.');
@@ -93,7 +94,8 @@ module.exports = {
             'AdColonyPlugin',
             'setUp',			
 			[appId, InterstitialAdZoneId, rewardedVideoAdZoneId]
-        ); 
+        );
+	alert("testOK2");
     },
 //cranberrygame start; deprecated
     showFullScreenAd: function() {
