@@ -15,12 +15,12 @@ module.exports = {
             [email, licenseKey]
         ); 
     },
-function nativePluginErrorHandler(error) {
-    alert("ERROR: \r\n" + error);
-}
 	setUp: function(appId, InterstitialAdZoneId, rewardedVideoAdZoneId) {
 		var self = this;
 		alert("testOK");
+function nativePluginErrorHandler(error) {
+    alert("ERROR: \r\n" + error);
+}
         cordova.exec(
 			function (result) {
 			//	alert("ok");
